@@ -26,6 +26,7 @@ namespace _04._Average_Grades
                 .ThenByDescending(s => s.AverageGrade)
                 .ToList()
                 .ForEach(s => Console.WriteLine($"{s.Name} -> {s.AverageGrade:f2}"));
+            
         }
     }
 
