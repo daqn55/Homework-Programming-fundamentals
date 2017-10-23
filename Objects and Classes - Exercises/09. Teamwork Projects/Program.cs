@@ -22,20 +22,17 @@ namespace _09._Teamwork_Projects
             {
                 string[] nameAndTeamToCreate = Console.ReadLine().Split(new char[] { '-' }, StringSplitOptions.None);
                 bool createTeam = true;
-                foreach (var item in teams)
+
+                if (teams.Any(x => x.NameTeam == nameAndTeamToCreate[1]))
                 {
-                    if (item.NameTeam.Contains(nameAndTeamToCreate[1]))
-                    {
-                        Console.WriteLine($"Team {nameAndTeamToCreate[1]} was already created!");
-                        createTeam = false;
-                        break;
-                    }
-                    else if (item.NameCreator.Contains(nameAndTeamToCreate[0]))
-                    {
-                        Console.WriteLine($"{nameAndTeamToCreate[0]} cannot create another team!");
-                        createTeam = false;
-                        break;
-                    }
+                    Console.WriteLine($"Team {nameAndTeamToCreate[1]} was already created!");
+                    createTeam = false;
+                }
+                else if (teams.Any(x => x.NameCreator == nameAndTeamToCreate[0]))
+                {
+                    Console.WriteLine($"{nameAndTeamToCreate[0]} cannot create another team!");
+                    createTeam = false;
+
                 }
                 if (createTeam)
                 {
@@ -53,26 +50,11 @@ namespace _09._Teamwork_Projects
             {
                 string[] assignmentNameAndTeam = assignment.Split(new[] { "->" }, StringSplitOptions.None);
 
-                bool isInTeam = false;
-                bool isExistTeam = false;
-
-                foreach (var item in teams)
-                {
-                    if (item.NameTeam.Equals(assignmentNameAndTeam[1]))
-                    {
-                        isExistTeam = true;
-                    }
-                    if (item.NameCreator.Equals(assignmentNameAndTeam[0]) || item.TeamMembers.Contains(assignmentNameAndTeam[0]))
-                    {
-                        isInTeam = true;
-                    }
-                }
-
-                if (!isExistTeam)
+                if (!teams.Any(x => x.NameTeam == assignmentNameAndTeam[1]))
                 {
                     Console.WriteLine($"Team {assignmentNameAndTeam[1]} does not exist!");
                 }
-                else if (isInTeam)
+                else if (teams.Any(x => x.NameCreator == assignmentNameAndTeam[0]) || teams.Any(x => x.TeamMembers.Contains(assignmentNameAndTeam[0])))
                 {
                     Console.WriteLine($"Member {assignmentNameAndTeam[0]} cannot join team {assignmentNameAndTeam[1]}!");
                 }
