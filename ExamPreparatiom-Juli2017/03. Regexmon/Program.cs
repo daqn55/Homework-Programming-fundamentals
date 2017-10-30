@@ -10,6 +10,7 @@ namespace _03.Regexmon
     {
         static void Main(string[] args)
         {
+            string
         }
     }
 }
