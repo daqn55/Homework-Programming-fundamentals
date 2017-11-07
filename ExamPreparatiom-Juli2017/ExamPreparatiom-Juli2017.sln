@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Pokemon Don't Go", "02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Regexmon", "03. Regexmon\03. Regexmon.csproj", "{1ECBEF77-145D-4B32-9F37-46A01EC0A1FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Pokemon Evolution", "04. Pokemon Evolution\04. Pokemon Evolution.csproj", "{31076AF4-3590-40A0-AFFC-A6233B890CFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1ECBEF77-145D-4B32-9F37-46A01EC0A1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ECBEF77-145D-4B32-9F37-46A01EC0A1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ECBEF77-145D-4B32-9F37-46A01EC0A1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31076AF4-3590-40A0-AFFC-A6233B890CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31076AF4-3590-40A0-AFFC-A6233B890CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31076AF4-3590-40A0-AFFC-A6233B890CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31076AF4-3590-40A0-AFFC-A6233B890CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
